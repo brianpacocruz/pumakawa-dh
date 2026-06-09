@@ -1,0 +1,292 @@
+{
+  "info": {
+    "_postman_id": "b96884eb-37cb-4b2d-94cb-dc0af3a6b5a3",
+    "name": "Pumakawa Red",
+    "description": "Colección de endpoints para la API de Pumakawa Red.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "item": [
+        {
+          "name": "Verificar estado de la API",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reportes",
+      "item": [
+        {
+          "name": "Obtener todos los reportes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reportes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reportes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener reporte por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reportes/rep-001",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reportes",
+                "rep-001"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo reporte",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tipoEvento\": \"Avistamiento\",\n    \"latitud\": -31.4201,\n    \"longitud\": -64.1888,\n    \"direccion\": \"Centro de la ciudad\",\n    \"fotoUrl\": \"https://example.com/foto.jpg\",\n    \"descripcion\": \"Ejemplo de reporte creado desde Postman\",\n    \"nombreContacto\": \"Usuario Test\",\n    \"contacto\": \"test@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reportes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reportes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar reporte",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"estado\": \"Validado\",\n    \"descripcion\": \"Descripción actualizada\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reportes/rep-002",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reportes",
+                "rep-002"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar reporte",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reportes/rep-003",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reportes",
+                "rep-003"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Protocolos",
+      "item": [
+        {
+          "name": "Obtener todos los protocolos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/protocolos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "protocolos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener protocolo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/protocolos/prot-001",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "protocolos",
+                "prot-001"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo protocolo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"tipoEvento\": \"Caza ilegal\",\n    \"titulo\": \"Acción ante caza furtiva\",\n    \"descripcion\": \"Qué hacer si detectas trampas o personas cazando de manera ilegal.\",\n    \"pasosSeguridad\": [\n        \"No confrontes a los cazadores directamente\",\n        \"Toma nota de patentes de vehículos si es seguro hacerlo\",\n        \"Comunícate urgente con la policía o guardaparques\",\n        \"No toques las trampas para no alterar evidencia\"\n    ],\n    \"colorAlerta\": \"Rojo\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/protocolos",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "protocolos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar protocolo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"colorAlerta\": \"Naranja\",\n    \"titulo\": \"Título modificado\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/protocolos/prot-002",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "protocolos",
+                "prot-002"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar protocolo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/protocolos/prot-003",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "protocolos",
+                "prot-003"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}

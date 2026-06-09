@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 const startServer = async () => {
     try {
         app.listen(PORT, () => {
-            console.log(`🚀 Servidor ejecutándose en http://localhost:${PORT}`);
+            console.log(`🚀 Servidor Backend ejecutándose en http://localhost:${PORT}`);
         });
     } catch (error) {
         console.error('❌ Error al levantar el servidor:', error);

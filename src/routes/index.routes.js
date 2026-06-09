@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import reporteRoutes from './reporte.routes.js';
+import protocoloRoutes from './protocolo.routes.js';
 
 const router = Router();
 
@@ -11,5 +13,9 @@ router.get('/health', async (req, res) => {
         res.status(500).json({ status: 'error', message: error.message });
     }
 });
+
+// Registrar rutas
+router.use('/reportes', reporteRoutes);
+router.use('/protocolos', protocoloRoutes);
 
 export default router;
